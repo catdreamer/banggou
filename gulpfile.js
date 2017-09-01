@@ -33,27 +33,27 @@ gulp.task('jtSass',function(){
 });
 
 
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var rename = require('gulp-rename');
-gulp.task('mergeJs',function(){
-	return gulp.src('./src/js/*.js')
+// var concat = require('gulp-concat');
+// var uglify = require('gulp-uglify');
+// var rename = require('gulp-rename');
+// gulp.task('mergeJs',function(){
+// 	return gulp.src('./src/js/*.js')
 
-		// 合并成all.js
-		.pipe(concat('all.js'))
+// 		// 合并成all.js
+// 		.pipe(concat('all.js'))
 
-		// 输出到dist目录
-		.pipe(gulp.dest('./dist/js'))
+// 		// 输出到dist目录
+// 		.pipe(gulp.dest('./dist/js'))
 
-		// 压缩
-		.pipe(uglify({mangle:false,compress:false}))
+// 		// 压缩
+// 		.pipe(uglify({mangle:false,compress:false}))
 
-		// 重命名
-		.pipe(rename({suffix:'.min'}))
+// 		// 重命名
+// 		.pipe(rename({suffix:'.min'}))
 
-		// 输出到dist目录
-		.pipe(gulp.dest('./dist/js'))
-});
+// 		// 输出到dist目录
+// 		.pipe(gulp.dest('./dist/js'))
+// });
 
 
 // 自动刷新
@@ -64,10 +64,10 @@ gulp.task('server',function(){
 		// server:'./src/',
 
 		// 代理服务器
-		proxy:'http://localhost:10000',
+		proxy:'http://localhost:1000',
 
 		// 端口
-		port:2008,
+		port:6520,
 
 		// 监听文件修改，自动刷新浏览器
 		files:['./src/**/*.html','./src/css/*.css','./src/api/*.php']

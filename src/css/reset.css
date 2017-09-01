@@ -1,0 +1,20 @@
+@charset "UTF-8";
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, em, img, strong, b, u, i, dl, dt, dd, ol, ul, li, form, label, table, tbody, thead, tr, th, td { margin: 0; padding: 0; border: 0; }
+
+body { font-family: "微软雅黑","宋体",verdana,"Helvetica Neue",Helvetica,sans-serif; font-size: 12px; line-height: 18px; }
+
+ol, ul { list-style: none; }
+
+img { display: block; border: 0 none; opacity: 1; }
+
+img:hover { opacity: 0.7; }
+
+a { text-decoration: none; cursor: pointer; display: block; }
+
+.fl { float: left; }
+
+.fr { float: right; }
+
+.clear::after { display: block; height: 0; content: ""; clear: both; overflow: hidden; visibility: hidden; }
+
+.container { width: 1200px; margin: 0 auto; min-width: 1200px; }

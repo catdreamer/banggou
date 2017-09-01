@@ -1,0 +1,133 @@
+/* 
+* @Author: Marte
+* @Date:   2017-09-01 11:48:36
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-09-01 21:35:32
+*/
+.headtop_wrap{
+    width: 100%;border-bottom: 1px solid #dcdcdc;
+}
+.headtop_wrap .container{
+    height: 30px;padding-bottom: 2px;
+}
+.headtopleft{
+    color: #999;line-height: 32px;
+}
+.headtopright{
+    height: 30px;margin-right: 15px;
+}
+.headtopright .headtop_content{
+    float:left;height: 30px;position: relative;
+}
+.headtopright .headtop_content a{
+    color: #999;z-index: 10;position: relative;
+}
+.headtopright .headtop_content a:hover{
+    color: #000;
+}
+.headerLogin a,.headtopOrder a,.headtopOrder a{
+    padding: 9px 25px 0 10px;
+}
+.headtopReg a{
+    margin: 9px 10px 0;
+}
+.headtopMember a{
+    padding: 9px 12px 0 10px;
+}
+.headtopDown a{
+    padding: 9px 30px 0 17px;
+}
+.headtopTwow a{
+    display: inline-block; padding: 9px 0 0 0;margin-left: 9px;
+}
+
+
+/*header*/
+/*#header{
+    width: 100%;height: 65px;
+}
+#header .container{
+    height: 60px;
+}
+#header .container .logo {
+    width: 260px;height: 55px;margin-top: 5px;
+}
+#header .container .logo a{
+    width: 230px;height: 55px;overflow: hidden;
+}
+#header .container .logo img{
+   margin-top: -10px; margin-left: -23px;
+}*/
+/*search*/
+/*#header .container .search{
+    width: 750px;height: 46px;padding-top: 7px;;
+}
+#header .container .search .seachLeft{
+    width: 378px;margin-top: 12px;height: 34px;background-color: #d51819;
+}
+.seachLeft #text{
+    width: 285px;height: 22px;padding: 5px 0 5px 5px;margin-right: 6px;float: left;border: 1px solid #d51819;color: #666;line-height: 22px;outline-offset: -2px;font-size: 12px;outline:none;
+}
+.seachLeft #btn{
+    width: 80px;height: 32px;padding: 0 12px;float: right;background-color: #d51819;border: 0 none;font-size: 14px;line-height: 32px;color: #fff;text-align: right;outline:none;
+}
+#header .container .search .seachRight{
+    width: 350px;margin-top: 20px;height: 15px;line-height: 15px;
+}
+#header .container .search .seachRight a{
+    float:left;color: #666;padding: 0 10px;border-right: 1px solid #DCDCDC;
+}
+#header .container .search .seachRight .last{
+    border-right: 0 none;
+}
+#header .container .search .seachRight a em{
+    font-style: normal;color: #d51819;
+}*/
+/*shopBag*/
+/*#header .container .shopBag{ 
+    width: 150px;height: 55px;background: url(../img/index/pic.png) 0 -410px no-repeat;
+}
+.bagContent {
+    margin-left: 15px;padding-left: 30px;
+}
+.bagContent a{
+    font: 400 14px "微软雅黑","宋体";
+    margin-top: 27px;
+    float: left;color: #000;
+}
+.bagContent a em{
+    font-weight: 400;font-style: normal;
+    color: #d93938;
+}*/
+/*nav*/
+/*#nav{
+    width: 100%;height: 28px;font-size: 14px;line-height: 29px;border-bottom: 1px solid #d51819;padding: 20px 0 5px;
+}
+.nav_ul{
+    width: 1200px;font-size: 14px;margin: 0 auto;line-height: 30px;
+}
+.nav_ul li {
+    float:left;padding: 0 15px;height: 33px;
+}
+.nav_ul .right{
+    float:right;padding: 0;bottom: 0;position: relative;
+}
+.nav_ul .right a {
+    height: 40px;
+}
+.nav_ul .right a img{
+     margin-top: -7px;
+}
+.nav_ul li a{
+    color: #000;height: 33px;
+}
+.nav_ul li a img{
+    margin-top: -10px;
+}
+.nav_ul .shop_flei{
+    position: relative;z-index: 899;margin-top: -6px;padding: 0 12px;height: 40px;width: 212px;line-height: 40px;cursor: pointer;color: #fff;background-color: #d51819;
+}
+.nav_ul .shop_flei i{
+    padding-right: 14px;vertical-align: sub;font-size: 26px;font-weight: 600;
+}*/
+
