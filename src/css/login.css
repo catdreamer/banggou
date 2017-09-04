@@ -1,0 +1,87 @@
+/*login*/
+body { font: 12px/1.5em Tahoma, Helvetica, Arial, \5B8B\4F53, sans-serif; color: #333; }
+
+#header { width: 980px; height: 100px; margin: 0 auto; }
+
+#header h1 { width: 220px; height: 100px; line-height: 100px; float: left; text-indent: -9999px; }
+
+#header a { width: 220px; height: 100px; background: url(../img/index/logoadd.jpg) no-repeat; }
+
+/*cont*/
+#cont { width: 980px; height: 481px; margin: 0 auto; margin-top: 25px; }
+
+#cont .left { width: 640px; height: 430px; }
+
+#cont .right { width: 340px; height: 481px; }
+
+#cont .right .login_tab { width: 340px; height: 40px; position: relative; }
+
+#cont .right .login_tab h3 { position: absolute; top: 4px; color: #666; height: 34px; line-height: 34px; font-size: 14px; cursor: pointer; text-align: center; border: 1px solid #ccc; background-color: #fff; }
+
+#cont .right .login_tab .t1 { width: 108px; left: 0; }
+
+#cont .right .login_tab .t2 { width: 108px; left: 109px; }
+
+#cont .right .login_tab .t3 { width: 120px; left: 218px; }
+
+#cont .right .login_tab .active { top: 0; padding-top: 3px; border-top: 2px solid #c00; border-bottom: 0 none; }
+
+#cont .right .login_content { width: 338px; height: 440px; border: 1px solid #ccc; border-top: none; padding-top: 1px; margin-top: -1px; }
+
+#cont .right .login_content .mes { width: 338px; height: 50px; }
+
+#cont .right .login_content .mes label { display: block; width: 80px; color: #666; line-height: 28px; font-size: 14px; text-align: right; float: left; }
+
+#cont .right .login_content .mes input { border: 1px solid #ccc; width: 220px; height: 26px; line-height: 26px; padding: 0 5px; margin-right: 10px; float: left; }
+
+#cont .right .login_content .mes .hint { padding-left: 80px; height: 22px; line-height: 22px; float: left; color: #ccc; }
+
+#cont .right .login_content .username_mes { margin-top: 30px; }
+
+#cont .right .login_content .code_mes { line-height: 28px; margin-top: 2px; }
+
+#cont .right .login_content .code_mes input { width: 50px; }
+
+#cont .right .login_content .code_mes .randomcode, #cont .right .login_content .code_mes .randomcode2 { width: 110px; height: 28px; display: inline-block; background-color: #ccc; font-size: 14px; text-align: center; }
+
+#cont .right .login_content .code_mes a { color: #333; display: inline-block; margin-left: 10px; }
+
+#cont .right .login_content .checkboxs { width: 338px; height: 28px; margin-top: 5px; margin-left: 80px; }
+
+#cont .right .login_content .checkboxs input { line-height: 20px; vertical-align: -3px; margin: 3px 3px 3px 4px; }
+
+#cont .right .login_content .checkboxs label { margin-right: 20px; }
+
+#cont .right .login_content .confir_mes { width: 338px; height: 34px; margin: 10px 0 19px 80px; }
+
+#cont .right .login_content .confir_mes input { margin-right: 10px; width: 104px; height: 34px; border: 0 none; cursor: pointer; background: url(../img/buttons.png) no-repeat; padding: 0; float: left; }
+
+#cont .right .login_content .confir_mes a { color: #333; line-height: 30px; text-decoration: underline; display: inline-block; float: left; }
+
+#cont .right .login_content .mes_bottom { width: 318px; height: 27px; text-align: center; padding: 15px 0; border-top: 1px solid #f1f1f1; margin: 0 10px; }
+
+#cont .right .login_content .mes_bottom span { height: 27px; display: inline-block; line-height: 27px; margin-right: 5px; }
+
+#cont .right .login_content .mes_bottom a { width: 80px; height: 27px; display: inline-block; line-height: 27px; color: #333; padding-left: 15px; color: #404040; }
+
+#cont .right .login_content .login_surport { width: 300px; height: 92px; border: 1px solid #efefef; margin: 0 18px 10px 18px; color: #333; }
+
+#cont .right .login_content .login_surport h4 { background-color: #efefef; line-height: 32px; padding: 0 8px; font-weight: normal; }
+
+#cont .right .login_content .login_surport a { display: inline-block; border: 1px solid #efefef; margin: -1px; width: 100px; height: 30px; line-height: 30px; text-indent: 38px; color: #333; background: url(../img/icon_login.png) no-repeat; }
+
+#cont .right .login_content .login_surport .qq { background-position: 7px -6px; }
+
+#cont .right .login_content .login_surport .zfb { background-position: 7px -56px; }
+
+#cont .right .login_content .login_surport .xlwb { background-position: 7px -195px; }
+
+#cont .right .login_content .login_surport .wx { background-position: 7px -101px; }
+
+#cont .right .login_content .login_surport .rrw { background-position: 7px -145px; }
+
+.r_bottom { width: 980px; margin: 0 auto; padding-top: 20px; text-align: center; }
+
+.r_bottom a { display: inline-block; color: #666; }
+
+.r_bottom a:hover { text-decoration: underline; }

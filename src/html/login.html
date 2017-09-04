@@ -3,8 +3,119 @@
 <head>
     <meta charset="UTF-8" />
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/login.css" />
 </head>
 <body>
-    
+    <div id="header">
+        <h1>邦购</h1>
+        <a href="#"></a>
+    </div>
+    <div id="cont" class="clear">
+        <div class="left fl">
+            <a href="#"><img src="../img/login_banner.jpg" alt=""></a>
+        </div>
+        <div class="right fr">
+            <div class="login_tab">
+                <h3 class="t1 active" ltn="用户名" ltw="登录密码">帐户登录</h3>
+                <h3 class="t2" ltn="手机号" ltw="登录密码">手机登录</h3>
+                <h3 class="t3" ltn="卡&nbsp;号" ltw="卡密码">卡登录</h3>
+            </div>
+            <div class="box">
+                <div class="login_content">
+                        <div class="mes username_mes clear">
+                            <label for="username">用户名：</label><input type="text" id="username" /><span class="hint">请输入用户名</span>
+                        </div>
+                        <div class="mes clear">
+                            <label for="password">登录密码：</label><input type="text" id="password" /><span class="hint"></span>
+                        </div>
+                        <div class="mes code_mes">
+                            <label for="code">验证码：</label><input type="text" id="code" /><span class="randomcode"></span><a class="changeCode">换一张</a>
+                        </div>
+                        <div class="checkboxs">
+                            <input type="checkbox" id="rememberpsw" checked /><label for="rememberpsw">记住用户名</label>
+                            <input type="checkbox" id="self_login" /><label for="self_login">自动登录</label>
+                        </div>
+                        <div class="confir_mes clear">
+                            <input type="submit" value="" /><a href="#">找回密码？</a>
+                        </div> 
+                        <div class="mes_bottom">
+                            <span>还不是邦购网用户？马上加入吧~~~</span><a href="http://localhost:6520/html/register.html">免费注册>></a>
+                        </div> 
+                        <div class="login_surport">
+                            <h4>或者使用合作网站登录：</h4>
+                            <p><a href="" class="qq">QQ</a><a href="" class="zfb">支付宝</a><a href="" class="xlwb">新浪微博</a><a href="" class="wx">微信</a><a href="" class="rrw">人人网</a></p>
+                        </div>                  
+                </div>
+                <div class="login_content">
+                     <div class="mes username_mes clear">
+                         <label for="username">手机号：</label><input type="text" id="username2" /><span class="hint phone_hint">请输入手机号</span>
+                     </div>
+                     <div class="mes clear">
+                         <label for="password">登录密码：</label><input type="text" id="password2" /><span class="hint password2_hint"></span>
+                     </div>
+                     <div class="mes code_mes">
+                         <label for="code">验证码：</label><input type="text" id="code2" /><span class="randomcode2"></span><a class="changeCode">换一张</a>
+                     </div>
+                     <div class="checkboxs">
+                         <input type="checkbox" id="rememberpsw" checked /><label for="rememberpsw">记住用户名</label>
+                         <input type="checkbox" id="self_login" /><label for="self_login">自动登录</label>
+                     </div>
+                     <div class="confir_mes clear">
+                         <input type="submit" value="" id="sub2" /><a href="#">找回密码？</a>
+                     </div> 
+                     <div class="mes_bottom">
+                         <span>还不是邦购网用户？马上加入吧~~~</span><a href="#">免费注册>></a>
+                     </div> 
+                     <div class="login_surport">
+                         <h4>或者使用合作网站登录：</h4>
+                         <p><a href="" class="qq">QQ</a><a href="" class="zfb">支付宝</a><a href="" class="xlwb">新浪微博</a><a href="" class="wx">微信</a><a href="" class="rrw">人人网</a></p>
+                     </div>                  
+                </div> 
+                <div class="login_content">
+                     <div class="mes username_mes clear">
+                         <label for="username">卡号：</label><input type="text" id="username" /><span class="hint">请输入卡号</span>
+                     </div>
+                     <div class="mes clear">
+                         <label for="password">卡密码：</label><input type="text" id="password" /><span class="hint"></span>
+                     </div>
+                     <div class="mes code_mes">
+                         <label for="code">验证码：</label><input type="text" id="code" /><span class="randomcode"></span><a class="changeCode">换一张</a>
+                     </div>
+                     <div class="checkboxs">
+                         <input type="checkbox" id="rememberpsw" checked /><label for="rememberpsw">记住用户名</label>
+                         <input type="checkbox" id="self_login" /><label for="self_login">自动登录</label>
+                     </div>
+                     <div class="confir_mes clear">
+                         <input type="submit" value="" /><a href="#">找回密码？</a>
+                     </div> 
+                     <div class="mes_bottom">
+                         <span>还不是邦购网用户？马上加入吧~~~</span><a href="#">免费注册>></a>
+                     </div> 
+                     <div class="login_surport">
+                         <h4>或者使用合作网站登录：</h4>
+                         <p><a href="" class="qq">QQ</a><a href="" class="zfb">支付宝</a><a href="" class="xlwb">新浪微博</a><a href="" class="wx">微信</a><a href="" class="rrw">人人网</a></p>
+                     </div>                  
+                </div>
+            </div>   
+        </div>
+    </div>
+    <div class="r_bottom">
+        美特斯邦威集团网站：
+        <a href="http://www.metersbonwe.com/">美特斯邦威</a> |
+        <a href="http://www.me-city.com/">ME&amp;CITY</a> |
+        <a href="http://www.chincn.com/">CH'IN祺</a> |
+        <!-- <a href="http://www.myfstv.com/">时尚秘书</a> | -->
+        <a href="http://www.banggo.com">邦购网</a>
+    </div>
+    <script src="../lib/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script> 
+    <script type="text/javascript" src="../js/login.js"></script> 
+    <script type="text/javascript">
+        jQuery(function($){
+            switchTab('.login_tab h3','.login_content');
+            sign();
+        });
+    </script>
 </body>
 </html>

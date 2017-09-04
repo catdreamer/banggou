@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/test.css" />
     <link rel="stylesheet" type="text/css" href="../css/register.css" />
 </head>
 <body>
@@ -12,30 +13,50 @@
         <a href="#"></a>
     </div>
     <div id="cont">
-        <div class="cont_top">
+        <div class="cont_top_tab clear">
             <span>手机注册</span>
+            <span>普通注册</span>
         </div>
-        <div class="box clear">
-            <div class="box_left fl">
-                <h3>第一步：填写手机账户信息（以下内容均为必填）</h3>
-                <form action="">
-                    <div class="usr">
-                         <label for="username">用户名：</label><input type="text" id="username" /><span>4-20个字符，一个汉字为两个字符，推荐使用中文会会员名字。一旦注册成功会员名将不能修改。</span>
-                    </div>
-                    <div class="psd">
-                        <label for="password">密码：</label><input type="password" id="password" /><span>请输入您的密码。</span><br />
-                    </div>
-                    <div class="cirpsd">
-                        <label for="cirpsd">确认密码：</label><input type="password" id="cirpsd" /><span></span>
-                    </div>
-                    <div class="yzm">
-                        <label for="code">验证码：</label><input type="text" id="code" /><span></span><span>换一张</span>
-                    </div>
-                    <input type="submit" value="确认" id="Rsub" />
-                </form>
+        <div class="clear rearea">
+            <div class="box fl">
+                <div class="box_left">
+                    <h3>第一步：填写手机账户信息（以下内容均为必填）</h3>
+                    <form action="">
+                        <div class="usr clear mes">
+                             <label for="username">手机号码：</label><input type="text" id="usernameP" /><span>4-20个字符，一个汉字为两个字符，推荐使用中文会会员名字。一旦注册成功会员名将不能修改。</span><font class="output_usernameP" color="red"></font>
+                        </div>
+                        <div class="psd mes clear">
+                            <label for="password">密码：</label><input type="password" id="password" /><span>请输入您的密码。</span><br /><font class="output_psd" color="red"></font>
+                        </div>
+                        <div class="yzm mes clear">
+                            <label for="code">验证码：</label><input type="text" id="code" /><span class="showcode"></span><span class="changeCode">换一张</span><font class="output_code" color="red"></font>
+                        </div>
+                        <div class="qr">
+                            <a id="Rsub" class="sub"></a>
+                        </div> 
+                    </form>
+                </div>
+                <div class="box_left">
+                    <h3>第一步：填写用户信息（以下内容均为必填）</h3>
+                    <form action="">
+                        <div class="usr clear mes">
+                             <label for="username">用户名：</label><input type="text" id="username" /><span>4-20个字符，一个汉字为两个字符，推荐使用中文会会员名字。一旦注册成功会员名将不能修改。</span><font class="output_username" color="red"></font>
+                        </div>
+                        <div class="psd mes clear">
+                            <label for="password">密码：</label><input type="password" id="password2" /><span>请输入您的密码。</span><br /><font class="output_psd" color="red"></font>
+                        </div>
+                        <div class="yzm mes clear">
+                            <label for="code">验证码：</label><input type="text" id="code2" /><span class="showcode"></span><span class="changeCode">换一张</span><font class="output_code" color="red"></font>
+                        </div>
+                        <div class="qr">
+                            <a href="" id="Rsub2" class="sub" ></a>
+                        </div> 
+                    </form>
+                </div>
             </div>
-            <img src="../img/index/register_bg.png" height="320" width="219" alt="" />
+            <img class="fr" src="../img/index/register_bg.png" height="320" width="219" alt="" />
         </div>
+        
     </div>
     <div class="r_bottom">
         美特斯邦威集团网站：
@@ -45,5 +66,14 @@
         <!-- <a href="http://www.myfstv.com/">时尚秘书</a> | -->
         <a href="http://www.banggo.com">邦购网</a>
     </div>
+    <script src="../lib/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script> 
+    <script type="text/javascript" src="../js/register.js"></script> 
+    <script type="text/javascript">
+        jQuery(function($){
+            switchTab('.cont_top_tab span','.box_left');
+            regist();
+        });
+    </script>
 </body>
 </html>

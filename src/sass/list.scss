@@ -1,0 +1,133 @@
+
+/*main*/
+
+.searchOptions{
+    width: 1198px;height: 190px;border: 1px solid #ccc;padding-bottom: 10px;margin-top: 20px;
+    .option{
+        width: 1158px;height: 21px;margin: 10px 0 0 20px;
+        span{
+            float: left;width: 50px;border-right: 1px #ccc solid;
+        }
+        .items{
+            float:left;width: 1038px;overflow-y: hidden;
+            a{
+                display: inline-block;color: #000;margin: 0 0 10px 20px;line-height: 18px;float: left;
+            }
+            .more{
+                float:left;color: #000;margin: 0 0 10px 20px;line-height: 18px;cursor: pointer;
+            }
+        }
+    }
+    .search_gaoji{
+        width: 1158px;height: 26px;margin: 10px 0 0 20px;
+        span {
+            float: left;width: 50px;
+        }
+        .xaixuan_item{
+            float:left;color: #000;margin: 0 0 10px 20px;cursor: pointer;height: 30px;
+            a{
+                width: 55px;padding: 3px 25px 2px 10px;    border: 1px solid #B5B5B5;border-radius: 3px;color: #000;
+            }
+        }
+    }
+    .search_jiage{
+        .jiage_items div{
+            float:left;color: #ccc;margin-left: 40px;
+            input{
+                width: 35px;height: 13px;float: left;text-align: center;color: #ccc;border: 1px solid #b0b0b0;padding: 2px 5px;
+            }
+            #pricebtn{
+                width: 45px;height: 19px;color: #000;background-color: #F5F5F5;margin-left: 5px;cursor: pointer;border-radius: 2px;line-height: 17px;  
+            }
+            b{
+                font-weight: 400;float: left;padding: 0 5px;
+            }
+        }
+    }
+}
+
+.searchGoods{
+    margin-top: 15px;
+    .searchGoodsTitle{
+        background-color: #f0f0f0;
+        .GoodsTitleleft{
+            height: 38px;
+            a{
+                float: left;border-right: 2px #fff solid;padding: 10px 25px;color: #000;
+            }
+            .active{
+                color: #fff;background-color: #F8584F;
+            }
+        }
+        .GoodsTitleright{
+            height: 20px;padding-top: 10px;padding-right: 10px;
+            .left{
+                padding: 1px 15px 0;
+                a{
+                    width: 30px;font: 400 12px "微软雅黑","宋体",verdana;color: #000;display: inline;
+                }
+            }
+            .right input{
+               vertical-align: middle;margin: 3px 3px 0px 5px;
+            }
+        }
+    }
+    .goods{
+        height: 3464px;font: 400 14px "微软雅黑","宋体",verdana;text-transform: uppercase;
+        .goodslist{
+            width: 1220px;height: 3464px;margin-right: -20px;overflow: hidden;
+            .good{
+                width: 230px;height: 418px;float:left;margin: 15px 12px 0 0;position: relative;background-color: #f0f0f0;
+                .imgLink{
+                    margin-bottom: 5px;width: 230px;height: 315px;
+                    img{
+                        width: 100%;height: 100%;
+                    }
+                }
+                span{
+                   display: block;width: 230px;height: 20px;overflow: hidden; 
+                   .brand{
+                       color:#000;float:left;width: 180px;height: 14px;line-height: 14px;overflow-y: hidden;text-align:left;
+                    } 
+                    .discount{
+                        float:right;width: 40px;height: 18px;line-height: 18px;border: 1px solid #f8584f;text-align: center;color:#f8584f;background: #fdedec;
+                    } 
+                    .title{
+                        color: #000;
+                        /*此处可改为不换行*/
+                    }
+                    .before{
+                        margin-left: 10px;font-style: normal;text-decoration:line-through;
+                    }
+                }
+                .colorTab{
+                    width: 230px;height: 30px;margin-top: 8px;
+                    a{
+                        width: 28px;height: 28px;float:left;margin-right: 9px;border: 1px solid #ccc;
+                        img{
+                            width: 100%;height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    /*page*/
+    /*注意：计算页面总数，生成多少标签，然后算出长度，赋给page*/
+    .page{
+        width: 384px;margin: 35px auto 0px;height: 30px;
+        a{
+            float:left;margin: 0 0 0 8px;border: 1px solid #e9e9e9;background-color: #fff;padding: 5px 10px;height: auto;color: #696969;
+        }
+        .currentPage{
+            color: #f8584f;border: 1px solid #f8584f;
+        }
+     }   
+}
+
+
+
+
+    
+    

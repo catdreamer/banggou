@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-09-01 11:48:36
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-02 10:45:09
+* @Last Modified time: 2017-09-02 22:48:49
 */
 .headtop_wrap{
     width: 100%;border-bottom: 1px solid #dcdcdc;
@@ -156,3 +156,14 @@
 #main .container{
     height: 2480px;
 }*/
+/*需要添加到register.scss中去*/
+.r_bottom{
+    width: 980px;margin: 0 auto; padding-top: 20px;text-align: center; 
+}
+.r_bottom a{
+    display: inline-block;color: #666;
+}
+.r_bottom a:hover{
+    text-decoration: underline;
+}
+

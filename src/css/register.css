@@ -8,26 +8,48 @@ body { font: 12px/1.5em Tahoma, Helvetica, Arial, \5B8B\4F53, sans-serif; color:
 
 #cont { width: 980px; margin: 0 auto; }
 
-#cont .cont_top { height: 26px; border-bottom: 2px solid #6e6e6e; }
+#cont .cont_top_tab { height: 26px; border-bottom: 2px solid #6e6e6e; }
 
-#cont .cont_top span { display: block; width: 160px; height: 26px; line-height: 26px; background-color: #6e6e6e; color: #fff; text-align: center; font-weight: bold; font-size: 14px; border-top-left-radius: 8px; border-top-right-radius: 8px; }
+#cont .cont_top_tab span { display: block; width: 160px; height: 26px; line-height: 26px; background-color: #6e6e6e; color: #fff; text-align: center; font-weight: bold; font-size: 14px; border-top-left-radius: 8px; border-top-right-radius: 8px; float: left; margin-right: 10px; }
 
-#cont .box { width: 978px; height: 380px; margin: 0 auto; border: 1px solid #ccc; margin-top: 10px; }
+#cont .rearea { width: 978px; height: 326px; margin: 0 auto; border: 1px solid #ccc; margin-top: 10px; }
 
-#cont .box .box_left { width: 743px; height: 276px; padding: 20px 0 30px 15px; }
+#cont .rearea .box { width: 758px; height: 326px; }
 
-#cont .box .box_left h3 { width: 700px; font-size: 14px; text-indent: 20px; line-height: 30px; margin-left: 15px; border-bottom: 1px dotted #E6E6E6; font-weight: 400; }
+#cont .rearea .box .box_left { width: 743px; height: 276px; padding: 20px 0 30px 15px; }
 
-#cont .box .box_left form { width: 743px; height: 230px; }
+#cont .rearea .box .box_left h3 { width: 700px; font-size: 14px; text-indent: 20px; line-height: 30px; margin-left: 15px; border-bottom: 1px dotted #E6E6E6; font-weight: 400; }
 
-#cont .box .box_left form div { color: #000; width: 700px; height: 56px; padding-top: 10px; margin-top: 5px; }
+#cont .rearea .box .box_left form { width: 743px; height: 230px; }
 
-#cont .box .box_left form div label { width: 120px; line-height: 30px; font-size: 14px; color: #666; text-align: right; float: left; }
+#cont .rearea .box .box_left form .mes { width: 700px; padding-top: 10px; }
 
-#cont .box .box_left form div input { width: 240px; height: 28px; line-height: 28px; padding-right: 5px; margin-right: 10px; border: 1px solid #ABABAB; box-shadow: 0 0 5px #ccc; float: left; }
+#cont .rearea .box .box_left form .mes label { width: 120px; line-height: 30px; font-size: 14px; color: #666; text-align: right; float: left; }
 
-#cont .box .box_left form div span { display: block; width: 305px; margin-top: -2px; color: #999; line-height: 16px; float: left; }
+#cont .rearea .box .box_left form .mes input { width: 240px; height: 28px; padding: 0 5px 0 0; margin-right: 10px; border: 1px solid #ababab; float: left; outline: none; }
 
-#cont .box .box_left form #Rsub { width: 152px; height: 34px; line-height: 34px; cursor: pointer; margin-left: 120px; }
+#cont .rearea .box .box_left form .mes span { width: 305px; display: inline-block; color: #999; line-height: 16px; float: left; height: 32px; }
+
+#cont .rearea .box .box_left form .mes font { height: 20px; color: #F60; display: block; line-height: 20px; float: left; margin-left: 120px; }
+
+#cont .rearea .box .box_left form .usr { margin-top: 15px; }
+
+#cont .rearea .box .box_left form .yzm input { width: 120px; }
+
+#cont .rearea .box .box_left form .yzm .showcode { width: 110px; height: 30px; display: block; float: left; background-color: #ccc; margin-right: 10px; font-size: 14px; text-align: center; line-height: 30px; color: #000; }
+
+#cont .rearea .box .box_left form .yzm .changeCode { color: #000; cursor: pointer; }
+
+#cont .rearea .box .box_left form .qr { width: 700px; padding-top: 10px; height: 34px; }
+
+#cont .rearea .box .box_left form .qr .sub { width: 152px; height: 34px; display: inline-block; margin: 0 20px 0 120px; }
+
+#cont .rearea .box .box_left form .qr #Rsub { background: url(../img/buttons.png) no-repeat; background-position: -226px -168px; }
+
+#cont .rearea .box .box_left form .qr #Rsub2 { background: url(../img/buttons.png) no-repeat; background-position: -226px -252px; }
 
 .r_bottom { width: 980px; margin: 0 auto; padding-top: 20px; text-align: center; }
+
+.r_bottom a { display: inline-block; color: #666; }
+
+.r_bottom a:hover { text-decoration: underline; }
