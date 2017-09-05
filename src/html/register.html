@@ -26,10 +26,10 @@
                              <label for="username">手机号码：</label><input type="text" id="usernameP" /><span>4-20个字符，一个汉字为两个字符，推荐使用中文会会员名字。一旦注册成功会员名将不能修改。</span><font class="output_usernameP" color="red"></font>
                         </div>
                         <div class="psd mes clear">
-                            <label for="password">密码：</label><input type="password" id="password" /><span>请输入您的密码。</span><br /><font class="output_psd" color="red"></font>
+                            <label for="password">密码：</label><input type="password" id="passwordP" /><span>请输入您的密码。</span><br /><font class="output_psdP" color="red"></font>
                         </div>
                         <div class="yzm mes clear">
-                            <label for="code">验证码：</label><input type="text" id="code" /><span class="showcode"></span><span class="changeCode">换一张</span><font class="output_code" color="red"></font>
+                            <label for="code">验证码：</label><input type="text" id="codeP" /><span class="showcode showcodeP"></span><span class="changeCode">换一张</span><font class="output_codeP" color="red"></font>
                         </div>
                         <div class="qr">
                             <a id="Rsub" class="sub"></a>
@@ -72,7 +72,7 @@
     <script type="text/javascript">
         jQuery(function($){
             switchTab('.cont_top_tab span','.box_left');
-            regist();
+            register();
         });
     </script>
 </body>

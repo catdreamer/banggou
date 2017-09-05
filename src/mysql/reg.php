@@ -1,42 +1,38 @@
 <?php
 
-	include 'connect.php';
+	// 配置参数
+include 'connect.php';
 	
-	// $username = isset($_GET['username']) ? $_GET['username'] : '';
-	$password = isset($_GET['password']) ? $_GET['password'] : '';
 	$phone = isset($_GET['phone']) ? $_GET['phone']: '';
+	// $username = isset($_GET['username']) ? $_GET['username'] : '';
+	// $password = isset($_GET['password']) ? $_GET['password'] : '';
+	// echo strlen($password);
 
-	//查看用户名是否已经存在
-	$sql = "select phone from users where phone='$phone'";
+	
+	$sql = "select * from users";
 	$result = $conn->query($sql);
-
-	// 如果用户名已经存在
-	// 给前端返回一个fail
+	// echo $username;
+	// echo $phone;
 	if($result->num_rows>0){
-		echo "fail";
-	}else{
-		// 密码md5加密
-		$password = md5($password);
-
-		$sql = "insert into users (username,password,phone) values('$username','$password','$phone')";
-
-
-		// 获取查询结果
+		//说明表中的数据不为空
+		//查看用户名是否已经存在
+		$sql = "select phone from users where phone='$phone'";
 		$result = $conn->query($sql);
-
-		if ($result) {
-		    echo "插入数据成功";
-		} else {
-		    echo "Error: " . $sql . "<br>" . $conn->error;
+		// 如果手机号码已经存在
+		// 给前端返回一个fail
+		if($result->num_rows>0){
+			echo "fail";
+		}else{
+			echo "success";
 		}
+	}else{
+		//表中的数据为空
+		echo "success";
 	}
-
-	
-	
-
 	// 释放查询内存(销毁)
-	//$result->free();
+	// $result1->free();
 
 	//关闭连接
-	$conn->close();
+	$conn->close();		
+	
 ?>

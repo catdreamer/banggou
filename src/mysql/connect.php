@@ -13,6 +13,7 @@
 	if($conn->connect_errno){
 		die('连接失败'.$conn->connect_error);
 	}
+	
 
 	// 设置编码
 	$conn->set_charset('utf8');

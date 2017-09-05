@@ -2,132 +2,119 @@
 * @Author: lmm
 * @Date:   2017-09-04 14:03:13
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-04 21:50:11
+* @Last Modified time: 2017-09-05 21:06:26
 */
 
 
 // 注册
+function register(){
+    var showCode = $('.showcodeP');
+    showCode.text(vCode());
+    $('.changeCode').on('click',function(){
+       showCode.text(vCode());
+    });
     
-    function regist(){
-        var $usernameP = $('#usernameP');
-        var $output_usernameP= $('.output_usernameP');
-        var $Rsub = $('#Rsub');
-        var $Rsub2 = $('#Rsub2');
-        var $username = $('#username');
-        var $output_username= $('.output_username');
-        var $Rsub2 = $('#Rsub2');
-        var showCode = $('.showcode');
+    //init
+    $('.output_usernameP').html('请输入手机号码');
+    $('.output_psdP').html('请输入密码');
+    $('.output_codeP').html('请输入验证码');
+    //验证
+    $('#usernameP').on('blur',function(){
+        if($('#usernameP').val()==''){
+              $('.output_usernameP').html("手机号不能为空");
+            return;
+        }else{
+             var reg = /^1[34578]\d{9}$/;
+             if(!reg.test($('#usernameP').val())){
+                $('.output_usernameP').html("手机号不合法");
+                 return;
+             }else{
+                $('.output_usernameP').html("手机号合法");
+                $.ajax({
+                    url: '../mysql/reg.php',
+                    // type: 'GET',
+                    data: {
+                        phone: $('#usernameP').val()
+                        // username: 'auto'
+                    },
+                    success: function(msg){
+                        console.log(msg);
+                        if(msg === 'fail'){
+                            $('.output_usernameP').html($('#usernameP').val()+'该手机号已经注册过');
+                            return;
+                        }else if(msg==='success'){
+                           $('.output_usernameP').html('该手机号可注册');  
+                           return; 
+                        }
+                    }
+                            
+                });
+
+            }
+        }
         
-        showCode.text(vCode());
-        $('.changeCode').on('click',function(){
-            showCode.text(vCode());
-        });
-        // //手机号验证
-        $usernameP.on('blur',function(){
+    });
+    $('#passwordP').on('blur',function(){
+        if( $('#passwordP').val()==''){
+            $('.output_psdP').html('密码不能为空');
+        }else{
+            var reg = /^[^><\s]{6,19}$/;
+            if(!reg.test($('#passwordP').val())){
+                $('.output_psdP').html('密码不合法');
+                return;
+            }else{
+                $('.output_psdP').html('密码合法');
+            }
+        }  
+    });    
+    $('#codeP').on('blur',function(){
+        if( $('#codeP').val()==''){
+            $('.output_codeP').html('验证码不能为空');
+        }else if($('#codeP').val().toLowerCase()!=showCode.text().toLowerCase()){
+            $('.output_codeP').html('验证码错误，请重新输入');
+            showCode.text(vCode());//验证码的值
+            $('#codeP').val("");
+            return;
+        }else{
+            $('.output_codeP').html('验证码正确');
+        }
+    });
+    $('#Rsub').on('click',function(){
+        if(($('#usernameP').val()!='') && ($('#passwordP').val()!='') && ($('#codeP').val()!='')){
             var reg = /^1[34578]\d{9}$/;
-            if($usernameP.val().length<1){
-                $output_usernameP.html("手机号不能为空");
-                return;
-            }
-            if(!reg.test($usernameP.val())&& $usernameP.val()>=1){
-                $output_usernameP.html("手机号不合法");
-                return;
-            }
-            $.ajax({
-                url: '../mysql/reg.php',
-                type: 'get',
-                data: {phone: $usernameP.val()},
-                success: function(msg){
-                    if(msg == 'fail'){
-                        $output_usernameP.html($usernameP.val()+'太受欢迎，请换一个');
-                    }else if(msg=='ok'){
-                        $Rsub.on('click',function(){
-                            registIn();
-                        });
-                    }
+            if(!reg.test($('#usernameP').val())){
+                alert('请输入合法的手机号才可注册！');
+                $('#usernameP').val('');
+                $('#passwordP').val('');
+                $('#codeP').val('');
+            }else{
+                if($('#passwordP').val().length>5){
+                   $.ajax({
+                       type: "GET",
+                       url: "../mysql/reg1.php",
+                       data: {
+                           phone: $('#usernameP').val(),
+                           password: $('#passwordP').val()
+                       },
+                       success: function(res){console.log(res)
+                           if(res ==='ok'){
+                                window.location.reload();
+                               alert('已经注册成功，亲可以去买买买啦');
+                               window.location.href='http://localhost:1000/html/login';
+                           }else{
+                               alert('注册失败，请填写正确的注册信息');
+                           }
+                       }
+                   });
+                }else{
+                    alert('请输入合法的密码信息！');
+                    $('#usernameP').val('');
+                    $('#passwordP').val('');
+                    $('#codeP').val('');
                 }
-            
-            });
-        });
-        //用户名验证
-        $username.on('blur',function(){
-            var reg = /^[a-z][\da-z\-]{5,19}$/i;
-            if($username.val().length<1){
-               $output_username.html("用户名不能为空"); 
-               return;
-            }
-            if(!reg.test($username.val())&& $username.val().length>0){
-                $output_username.html("用户名不合法");
-                return;
-            }
-            $.ajax({
-                url: '../mysql/reg.php',
-                type: 'get',
-                data: {username: $username.val()},
-                success: function(msg){
-                    if(msg == 'fail'){
-                        $output_username.html($username.val()+'太受欢迎，请换一个');
-                    }else if(msg=='ok'){
-                        $output_username.html('抢占用户名成功');
-                        $Rsub2.on('click',function(){
-                            registIn();
-                        });
-                    }
-                }
-            
-            });
-        });
-    }
-    function registIn(){
-        var $output_psd = $('.output_psd');
-        var $output_code = $('.output_code');
-        var $usernameP = $('#usernameP');
-        var $password = $('#password');
-        // var $inCode = $("#code").text();
-        var reg = /^1[34578]\d{9}$/;
-        if(!reg.test($usernameP.val())){
-           $output_usernameP.html("手机号不合法");
-            // alert('注册手机号不合法');
-            return;
+            }   
+        }else{
+            alert('请输入完整注册信息！');
         }
-         var $output_psd = $('.output_psd');
-            var $password = $("#password2");
-            var reg = /^[a-z][\da-z\-]{5,19}$/i;
-            if(!reg.test($username.val())){
-                $output_username.html("用户名不合法");
-                // alert('注册用户名不合法');
-                return;
-            }
-        var reg=/^\S{6,19}$/;
-        if(!reg.test($password.val())){
-            $output_psd.html('密码不合法');
-            return;
-        }
-       
-        if($("#code").val().toLowerCase()!= $('.showcode').text().toLowerCase()){
-            $output_code.html('验证码错误，请重新输入');
-           $('.showcode').text(vCode());
-            $("#code").val()("");
-            return;
-        }
-        $.ajax({
-            url: '../mysql/reg.php',
-            type: 'get',
-            data: {
-                // username: $username.val(),
-                password: $password.val(),
-                phone: $usernameP.val()
-            },
-            success: function(msg){
-                if(msg === 'success'){
-                    alert('已经注册成功，亲可以去浪了');
-                }
-            }
-        });
-        // alert('恭喜您'+$username.val()+"注册成功");
-        
-        // setTimeout(function(){
-        //     window.location.reload();
-        //     $output_username.html("");
-        // },1000);
-    }
+    });
+}
