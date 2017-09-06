@@ -7,6 +7,14 @@
     <link rel="stylesheet" type="text/css" href="css/public.css" />
     <link rel="stylesheet" type="text/css" href="css/test.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <script src="lib/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="js/common.js"></script> 
+    <script type="text/javascript" src="js/index.js"></script> 
+    <script type="text/javascript">
+        jQuery(function($){
+           duanMa();
+        });
+    </script>
 </head>
 <body>
 <!-- web_banner -->
@@ -22,7 +30,7 @@
                     <a class="heaerRa" href="">登录<em></em></a>
                 </div>
                 <div class="headtop_content headtopReg">
-                    <a href="">注册</a>
+                    <a href="http://localhost:1000/html/register">注册</a>
                 </div>
                 <div class="headtop_content headtopOrder">
                     <a href="">我的邦购</a>
@@ -115,6 +123,7 @@
     </div>
 <!--hot_brand  -->
     <div class="hot_band">
+        <ul class="duanmaBox"></ul>
         <span class="hot_band_btn_prev"></span>
         <span class="hot_band_btn_next"></span>
     </div>
@@ -424,6 +433,7 @@
             </div>
         </div>
     </div>
+
 </body>
 
 </html>

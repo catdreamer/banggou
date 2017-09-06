@@ -88,7 +88,17 @@ body { width: 1263px; height: auto; min-height: 600px; }
 
 #banner .container .banner_right .br img { width: 236px; height: 166px; }
 
-.hot_band { width: 1200px; height: 132px; margin: 0 auto; background-color: pink; position: relative; }
+.hot_band { width: 1200px; height: 132px; margin: 0 auto; position: relative; overflow: hidden; }
+
+.hot_band .duanmaBox { width: 2405px; height: 118px; position: absolute; top: 0; left: 0; padding: 7px 0; }
+
+.hot_band .duanmaBox li { width: 236px; height: 118px; margin-right: 5px; float: left; }
+
+.hot_band .duanmaBox li a { width: 100%; height: 100%; }
+
+.hot_band .duanmaBox li a img { width: 100%; height: 100%; }
+
+.hot_band .duanmaBox li:last-child { margin-right: 0; }
 
 .hot_band span { display: block; z-index: 999; width: 40px; height: 40px; position: absolute; right: 3px; top: 46px; cursor: pointer; }
 

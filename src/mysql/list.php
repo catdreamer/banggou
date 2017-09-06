@@ -4,7 +4,7 @@
 	
 	// 获取前端传过来的数据
 	$pageNo = isset($_GET['pageNo']) ? $_GET['pageNo'] : 1;
-	$qty = isset($_GET['qty']) ? $_GET['qty'] : 10;
+	$qty = isset($_GET['qty']) ? $_GET['qty'] : 4;
 	$cate = isset($_GET['cate']) ? $_GET['cate'] : '';
 
 	// 编写sql语句
