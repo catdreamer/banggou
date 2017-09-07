@@ -3,7 +3,7 @@
 	
 	$id = isset($_GET['id']) ? $_GET['id'] : '';
 
-	$sql = 'select * from goods where id='. $id;
+	$sql = 'select * from goods where goodnum='. $id;
 
 
 	// 获取查询结果

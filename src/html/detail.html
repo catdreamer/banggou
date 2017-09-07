@@ -7,6 +7,14 @@
     <link rel="stylesheet" type="text/css" href="../css/public.css"/>
     <link rel="stylesheet" type="text/css" href="../css/test.css"/>
     <link rel="stylesheet" type="text/css" href="../css/detail.css" />
+    <script src="../lib/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script> 
+    <script type="text/javascript" src="../js/detail.js"></script> 
+    <script type="text/javascript">
+        jQuery(function($){
+           goodDetail();
+        });
+    </script>
 </head>
 <body>
     <!--topline  -->
@@ -112,25 +120,89 @@
                 <div class="pictureArea">
                     <!-- 正常图 -->
                     <div class="normalPic">
-                        <!-- 相册弹出按钮 -->
-                            <span></span>
-                            <img src="" alt="" />
+                        <!-- 相册弹出按钮  定位设置 -->
+                            <!-- <span></span> -->
                     </div>
                     <!-- 放大镜 -->
                     <div class="bigPic"></div>
                     <!-- 多张小图 -->
                     <div class="smallPic">
-                        <ul>
-                            <li class="active"><img src="" alt="" /></li>
-                            <li><img src="" alt="" /></li>
+                        <ul class="fiveimgs">
+                            <!-- <li class="active"><img src="" alt="" /></li>
+                            <li><img src="" alt="" /></li> -->
                         </ul>
                     </div>
                 </div>
                 <div class="shares">
-                    <span>商品编号:</span><span class="bianhao">a07105</span><span class="sharefuhao"><i></i>分享</span><span class="dianzan"><i></i>点赞</span>
+                    <span>商品编号:</span><span class="bianhao"></span><span class="sharefuhao"><i></i>分享</span><span class="dianzan"><i></i>点赞</span>
                 </div>  
             </div>
-            <div class="rightMessage fl"></div>
+            <div class="rightMessage fl">
+                <div class="good_brand_title clear">
+                    <a class="good_brand" href="#"></a><a class="good_title" href="#"></a>
+                </div>
+                <div class="good_detail_base">
+                    <ul>
+                        <li>
+                            <b>售价：</b>
+                            <strong class="price"></strong>
+                            <i>吊牌价：</i>
+                            <i class="before"></i>
+                            <span class="discount"></span>
+                        </li>
+                        <li class="clear"><span class="nodiscount">本品不参加vip,svip折扣</span>
+                            <div class="rules fr">会员规则
+                                <div class="rules_show" style="display:none;">
+                                    在有效期1年内：<br>
+                                    累计购物满1000元则升级为VIP；未满1000元则降为普通会员。<br>
+                                    在有效期1年内：<br>
+                                    累计购物满2000元则升级为SVIP；如累计购物1000~1999元，则降为VIP；如累计购物未满1000元则降为普通会员。<br> 
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="good_sail">
+                    <i>销量</i><span>82</span>
+                    <i>累计评价</i><span>0</span>
+                    <i>送邦购积分</i><span class="score">219</span>
+                </div>
+                <div class="good_color_size">
+                    <div class="good_color_list">
+                        <dt>颜色：<b>请选择颜色</b>
+                        </dt>
+                        <dd class="clear">
+                            <a href="#"><img src="" alt="" /></a>
+                            <a href="#"><img src="" alt="" /></a>
+                        </dd>
+                    </div>
+                    <div class="good_size_list">
+                        <a href="#" class="cmxzzs">尺码选择助手</a>
+                        <dt>尺码：<b>请选择尺码</b>
+                        </dt>
+                        <dd class="clear">
+                            <a href="#"><img src="" alt="" /></a>
+                            <a href="#"><img src="" alt="" /></a>
+                        </dd>
+                    </div>
+                </div>
+                <div class="good_buy_num">
+                    <span class="buy1">购买数量：</span>
+                    <a class="dec" href="">-</a>
+                    <input type="text" class="text"/>
+                    <a href="" class="add">+</a>
+                    <span class="havenum">库存剩余<strong>71</strong>件</span>
+                </div>
+                <div class="good_add_bagbtn">
+                    <a href="#">加入购物袋</a>
+                </div>
+                <div class="good_keywords clear">
+                    <li>浏览更多：<a href="#" class="keyword">半身裙</a></li>
+                </div>
+                <div class="good_more clear">
+                    <span>温馨提示：</span><li>此商品不可使用积分</li><li>14天退换</li>
+                </div>
+            </div>
         </div>
     </div>
     <!-- last_bottom -->

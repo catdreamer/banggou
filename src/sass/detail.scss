@@ -1,3 +1,6 @@
+body{
+    line-height:18px;
+}
 .breadnav{
     width: 1200px;height: 26px;margin: 0 auto;padding: 15px 0 5px 0;margin-top: 20px;
     .breadnavLink{
@@ -18,19 +21,29 @@
     .leftImg{
         width: 480px;height: 620px;margin-right: 50px;
         .pictureArea{
-            width: 480px;height: 575px;position: relative;background-color: #ddd;
+            width: 480px;height: 575px;position: relative;
             .normalPic{
                 width: 480px;height: 480px;position: relative;
+                img{
+                    width: 100%;height: 100%;
+                }
             }
             .bigPic{
-                position: absolute;width: 480px;height: 480px;z-index: 999;border: 1px solid #ccc;background-color: #f5f5f5;left: 520px;top: 0;display: none;
-                /*放大镜区域隐藏先*/
+                position: absolute;width: 480px;height: 480px;z-index: 999;border: 1px solid #ccc;left: 520px;top: 0;display: none;
+                // /*放大镜区域隐藏先*/background-color: #f5f5f5;
             }
             .smallPic{
-                width: 480px;height: 80px;margin-top: 15px;background-color: green;
+                width: 480px;height: 80px;margin-top: 15px;
                  li{
-                    width: 80px;height: 80px;margin-right: 20px;float: left;border: 1px solid #c7c7c7;cursor: pointer;box-sizing: border-box;
+                    width: 80px;height: 80px;margin-right: 20px;float:left;border: 1px solid #c7c7c7;cursor: pointer;box-sizing: border-box;
+                    img{
+                        width: 78px;height: 78px;
+                    }
+                    &:last-child{
+                        margin-right: 0;
+                    }
                 }
+
                 .active{
                     border: 1px solid #f8584f;
                 }
@@ -49,6 +62,144 @@
             }
             .dianzan{
                 color: #f8584f;margin-left: 35px;font-family: "微软雅黑";padding-left: 30px;background-size: 18px 16px;
+            }
+        }
+    }
+    .rightMessage{
+        width: 670px;height: 549px;
+        .good_brand_title{
+            width: 100%;height: 24px;line-height: 24px;overflow: hidden;
+            a{
+                float:left;color: #222;font-size: 18px;font-weight:700;text-transform: uppercase;margin-right: 10px;
+            }
+            .good_title{
+                 float:left;color: #222;font-size: 16px;font-weight:600;
+            }
+        }
+        .good_detail_base{
+            width: 100%;height: auto;margin-top: 18px;background-color:#f6f6f6;box-sizing: border-box;
+            ul{
+                width: 100%;padding-bottom: 15px;height: 75px;
+                li{
+                    height: 29px;padding: 15px 15px 0 15px;
+                    b{
+                        color:#222;font-weight:400;
+                    }
+                    strong{
+                        font-weight: 700;font-size: 22px;color:#f8584f;
+                    }
+                    i{
+                        padding-left: 30px;color: #222;font-style:normal;  
+                    }
+                    .before{
+                        padding-left:5px;color: #696969;font-style: normal;text-decoration:line-through;
+                    }
+                    .discount{
+                         display:inline-block;padding: 3px 10px;height: 16px;color: #fff;margin-top: 5px;background-color: #f84646;margin-left:375px;  
+                    }  
+                    .nodiscount{
+                        display:inline-block;height: 16px;color: #696969;float:left;
+                    } 
+                    .rules{
+                        position:relative;
+                         .rules_show{
+                            width: 400px;height: 90px;padding: 10px;position:absolute;line-height: 150%;background-color: #fff;left:0;top:17px;margin-left: -373px;box-shadow: 0 0 15px #ccc;z-index: 111;
+                         }  
+                    }
+                }  
+            }
+        }
+        .good_sail{
+            width: 370px;height: 16px;color: #696969;padding: 6px 0;margin-top: 20px;
+            i{
+                font-style: normal;margin-left:20px;
+            }
+            span{
+                 display: inline-block;color: #f8584f;margin: 0 4px;padding-right:20px;border-right:1px solid #ededed;
+            }
+        }
+        .good_color_size{
+            width: 100%;
+            .good_color_list{
+                width: 100%;height: 81px;overflow:hidden;margin-top:20px;
+                dt{
+                   width: 100%;overflow:hidden;height: 16px;
+                   b{
+                    font-weight: 400; color: #666; 
+                   }
+                }
+                dd{
+                    height: 65px;
+                    a{
+                        float:left;width: 51px;height: 51px;padding:1px;border: 1px solid #dcdcdc;margin: 10px  10px 0 0;
+                    }
+                }
+            }
+            .good_size_list{
+                width: 100%;height: 56px;margin-top:20px;position:relative;
+                .cmxzzs{
+                    position:absolute;top:0;right:10px;padding-left: 20px;color:#666;
+                }
+                dt{
+                    width: 100%;overflow:hidden;height: 16px;
+                    b{
+                        font-weight: 400; color: #666; 
+                    }
+                }
+                dd{
+                    height: 65px;
+                    a{
+                        width: 63px;height: 18px; border: 1px solid #DCDCDC;padding: 5px;text-align: center;color: #696969;margin-top: 10px;margin-right: 10px;float:left;
+                    }
+                }
+            }
+        }
+        .good_buy_num{
+            width: 550px;height: 27px;margin-top:20px;
+            .buy1{
+                width: 60px;overflow: hidden;padding-top: 5px;height: 16px;float:left;display:block;
+            }
+            a{
+                height: 23px;border: 1px solid #dcdcdc ;margin: 2px 5px 0 5px;line-height:23px;font-size:14px;text-align: center;
+            }
+            .dec,.add{
+                width: 23px;float:left;
+            }
+            .text{
+                width: 30px;height: 19px;padding: 2px 5px;border: 1px solid #dcdcdc;margin-top:2px;float:left;
+            }
+            .havenum{
+                float:left;display:block;color: #666;
+                strong{
+                    font-weight: 400;line-height: 200%;color:red;
+                }
+            }
+        }
+        .good_add_bagbtn{
+            width: 200px;height: 55px;
+            a{
+                width: 200px;height: 16px;padding: 9px 0 10px 0;margin-top:20px;background-color:red;color:#fff;text-align:center;
+                &:hover{
+                    color: #000;
+                }
+            }
+        }
+        .good_keywords{
+            width: 550px;height: 16px;
+            li{  
+                float: left;display: block;margin-right: 15px; color: #000;
+                a{
+                    display: inline-block;color: #666;
+                }
+            }
+        }
+        .good_more{
+            width: 670px;height: 33px;margin-top:20px;
+            span{
+                float:left;
+            }
+            li{
+                float:left;min-width: 300px;color: #666;margin-bottom: 15px;
             }
         }
     }
