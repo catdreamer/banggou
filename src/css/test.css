@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-09-01 11:48:36
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-02 22:48:49
+* @Last Modified time: 2017-09-08 23:18:33
 */
 .headtop_wrap{
     width: 100%;border-bottom: 1px solid #dcdcdc;
@@ -27,6 +27,9 @@
 }
 .headerLogin a,.headtopOrder a,.headtopOrder a{
     padding: 9px 25px 0 10px;
+}
+.headerLogin .tuichu{
+    display:none;
 }
 .headtopReg a{
     margin: 9px 10px 0;

@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-09-04 15:08:27
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-05 21:50:15
+* @Last Modified time: 2017-09-08 22:51:01
 */
 
 // require(['config'],function(){
@@ -76,7 +76,7 @@ function sign(){
                             var now = new Date();
                             now.setDate(now.getDate()+7);
                             Cookie.set('user',$('#username2').val(),now,'/');
-                            window.location.reload();
+                            // window.location.reload();
                             alert('登录成功');
                             window.location.href='http://localhost:1000/';
                         }

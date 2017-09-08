@@ -1,3 +1,5 @@
+@import "reset";
+@import "public";
 body{
     line-height:18px;
 }
@@ -132,6 +134,15 @@ body{
                     height: 65px;
                     a{
                         float:left;width: 51px;height: 51px;padding:1px;border: 1px solid #dcdcdc;margin: 10px  10px 0 0;
+                        &:hover{
+                            border: 1px solid #f00; 
+                        }
+                        img{
+                            width: 100%;height: 100%;
+                        }
+                    }
+                    .active{
+                        border: 1px solid #f00; 
                     }
                 }
             }
@@ -149,7 +160,13 @@ body{
                 dd{
                     height: 65px;
                     a{
-                        width: 63px;height: 18px; border: 1px solid #DCDCDC;padding: 5px;text-align: center;color: #696969;margin-top: 10px;margin-right: 10px;float:left;
+                        width: auto;height: 18px; border: 1px solid #DCDCDC;padding: 5px;text-align: center;color: #696969;margin-top: 10px;margin-right: 10px;float:left;
+                        &:hover{
+                           border: 1px solid #f00; 
+                        }
+                    }
+                    .active{
+                        border: 1px solid #f00; 
                     }
                 }
             }
@@ -166,13 +183,16 @@ body{
                 width: 23px;float:left;
             }
             .text{
-                width: 30px;height: 19px;padding: 2px 5px;border: 1px solid #dcdcdc;margin-top:2px;float:left;
+                width: 30px;height: 19px;padding: 2px 5px;border: 1px solid #dcdcdc;margin-top:2px;float:left;text-align: center;
             }
             .havenum{
                 float:left;display:block;color: #666;
                 strong{
                     font-weight: 400;line-height: 200%;color:red;
                 }
+            }
+            .havemes{
+                color:#f00;line-height: 24px;display:none;
             }
         }
         .good_add_bagbtn{
@@ -187,7 +207,7 @@ body{
         .good_keywords{
             width: 550px;height: 16px;
             li{  
-                float: left;display: block;margin-right: 15px; color: #000;
+                float:left;display: block;margin-right: 15px; color: #000;
                 a{
                     display: inline-block;color: #666;
                 }
@@ -204,3 +224,37 @@ body{
         }
     }
 } 
+// 加入购物车弹出框  固定定位
+.account{
+    width: 702px;height: 226px;position: fixed;left:50%;top:50%;margin-left:-351px;margin-top:-120px;background-color:#fff;display:none;
+    .account_title{
+        width: 700px;color: #333;font-size: 14px;border-bottom: 1px #ccc solid;padding: 8px 0;background: #fafafa;
+        span{
+            float:left;display: block;padding-left: 10px;  
+        }
+        a{
+            background: url(/img/icons.png) -16px -1583px no-repeat;float:right; width:15px;height: 15px;margin-right: 10px;color: #666;    
+        }   
+    }
+    .account_box{
+        width: 700px;height: 188px;
+        span{
+            display:block;font-size: 20px;padding-top: 30px;height: 26px;text-align:center;line-height:26px;
+        }
+        .account_btn{
+            height: 32px;padding-top:20px;margin-top: 20px;
+            a{
+                height: 16px;font-size: 12px;line-height: 16px;
+            }
+            .ac{
+               background-color: #f8584f;float:left;padding: 8px 40px;color: #fff;margin-left: 200px;  
+            }
+            .cshop{
+                background-color: #fff;float:right;padding: 7px 39px;color: #999;margin-right: 200px;border: 1px solid #c7c7c7;
+                &:hover{
+                    border: 1px solid #f00;
+                }
+            }
+        }
+    }
+}

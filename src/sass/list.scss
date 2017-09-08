@@ -1,6 +1,8 @@
 
 /*main*/
 
+@import "reset";
+@import "public";
 .searchOptions{
     width: 1198px;height: 190px;border: 1px solid #ccc;padding-bottom: 10px;margin-top: 20px;
     .option{

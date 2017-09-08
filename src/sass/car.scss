@@ -1,0 +1,16 @@
+
+@import "reset";
+@import "public";
+#car_headtop{
+    .container{
+        height: 55px;padding-top: 5px;
+    }
+}
+.flow_headcontent{
+    .container{
+        height: 27px;position: relative;border-bottom:1px solid #dcdcdc;box-sizing:border-box;
+        span{
+            width: 398px;height: 30px;position: absolute;padding: 0;right: 0;display: block;background: url(/img/pic.png) no-repeat;background-position: 0 -1578px;z-index: 1;margin-top:-1px;
+        }
+    }
+}

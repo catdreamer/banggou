@@ -2,8 +2,22 @@
 * @Author: Marte
 * @Date:   2017-09-06 21:00:38
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-07 17:07:22
+* @Last Modified time: 2017-09-08 20:35:29
 */
+require(['config'],function(){
+    require(['jquery','common'],function($){ 
+        $(function($){
+                $('.headtop_wrap').load('/html/public.html .headtop_c');
+                $('#header').load('/html/public.html .header_c');
+                $('#nav').load('/html/public.html .nav_ul');
+                $('.last_bottom_wrap').load('/html/public.html .last_bottom_c');
+                $('#footer').load('/html/public.html .footer_c');
+                getData(1,40);
+                req();
+                Taba();
+       })
+    })
+});
 function getData(pageNo,qty,gender,category,band){
   $.ajax({
       url: '/mysql/list.php',
