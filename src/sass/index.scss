@@ -11,6 +11,84 @@ body{
     width: 100%;height: 80px;background-color: #eb6343;
     img{margin: 0 auto;}
 }
+// 
+.hot_band{
+    width: 1200px;height: 132px;margin: 0 auto;position: relative;overflow: hidden;
+    .duanmaBox{
+        width: 2405px;height: 118px;position: absolute;top:0;left:0;padding: 7px 0;
+        li{
+            width: 236px;height: 118px;margin-right: 5px;float:left;
+            a{
+               width: 100%;height: 100%; 
+               img{
+                    width: 100%;height: 100%; 
+               }
+            }
+            &:last-child{
+                margin-right:0;
+            }
+        }
+        
+    }
+    span{
+        display: block;z-index: 999;width: 40px;height: 40px;position: absolute;right: 3px;top: 46px;cursor: pointer;
+    }
+    .hot_band_btn_prev{
+        background:url(../img/index/prev.png) no-repeat;left: 3px;
+    }
+    .hot_band_btn_next{
+        background:url(../img/index/next.png) no-repeat;
+    }
+}
+/*banner*/
+#banner{
+    .container{
+        .banner_box{
+               overflow: hidden;padding: 0;margin: 5px 5px 0 241px;float:left;position: relative;background-color:#fff;
+                #banner-img{
+                   width: 5026px;position: absolute;left:  -718px;
+                   .banner-img{
+                       width: 718px;height: 480px;float:left;
+                        img{
+                           display: block;width: 718px;height: 480px;   
+                       }   
+                   }  
+                }
+                /* 索引 */
+                #banner-index{
+                    position: absolute;left: 0;bottom: 0;height: 42px;width: 720px;border: 1px solid #dcdcdc;border-top:none;
+                    .banner-index{
+                        width: 20%;float:left;border-top: 1px solid #dcdcdc;font-size:14px;font-weight: bold;box-sizing:border-box;color:#666;padding: 1px 0 0 0;text-align:center;overflow:hidden;height: 43px;                 
+                        &.banner-active{
+                            border-top: 2px solid red;color:#000;
+                        }
+                        span{
+                            display: inline-block;width: 100%;border-right: 1px solid #dcdcdc;padding: 0 6px;box-sizing:border-box;margin-top:12px;cursor: pointer;
+                        }
+                    }
+                }
+                /* 按钮 */
+                #banner-btn{
+                    display: none;
+                    .banner-btn{
+                        width: 50px;height: 100px;background: #ccc;line-height: 100px;text-align: center;font-size:  30px;position: absolute;
+                        a{
+                            color: #fff;
+                        }   
+                    }
+                    .banner-prev{
+                        left: 30px;z-index: 222;top: 50%;margin-top: -50px;           
+                    }
+                    .banner-next{
+                        left: 640px;z-index: 222;top: 50%;margin-top: -50px;  
+                    }
+                }
+           }
+        }
+    } 
+
+
+
 #main{
     width: 100%;
     .container{

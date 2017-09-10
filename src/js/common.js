@@ -2,7 +2,7 @@
 * @Author: lmm
 * @Date:   2017-09-04 14:44:05
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-05 21:18:19
+* @Last Modified time: 2017-09-09 17:01:40
 */
 
 // tab切换
@@ -27,7 +27,7 @@ function vCode(){
     }
     return res;
 }
-var Cookie = {
+;var Cookie = {
     /**
      * [设置cookie]
      * @param {String} name    [cookie名]
@@ -82,6 +82,61 @@ var Cookie = {
         // document.cookie = name +'=xxx;expires=' + now.toUTCString();
         Cookie.set(name,null,now);
     }
+}
+//返回顶部
+;function toTop(){
+    $('.to_top').hide();
+    $(window).on('scroll',function(){
+        var scrollTop = $(window).scrollTop();
+        if(scrollTop>800){
+            $('.to_top').show();
+           
+        }else{
+            $('.to_top').hide();
+        }
+    });
+     $('.to_top').on('click',function(){
+        var scrollTop = $(window).scrollTop();
+        $('html,body').stop().animate({'scrollTop':100},'slow');
+     });
+}
+
+//导航
+;function Nav(){
+    $(".left_nav_ul>li").hover(function(){
+        var index = $(".left_nav_ul>li").index($(this));
+        $(".left_nav_ul_div_list").eq(index).addClass("left_nav_ul_div_active").show();
+    },function(){
+        $(".left_nav_ul_div_list").removeClass("left_nav_ul_div_active").hide();
+    })
+    $(".left_nav_ul").hover(function(){
+        $(".left_nav_ul_div").show();
+    },function(){
+        $(".left_nav_ul_div").hide();
+    })
+}
+//手动轮播
+;function rollBar(ele,prev,next,width){
+    //ul的宽
+    var el =$(ele);
+    //prev按钮
+    $(prev).on('click',function(){
+        if(el.position().left===0){
+            el.animate({left: 0});
+        }
+        if(el.position().left===-width){
+            el.animate({left:0}, 300);
+        }
+    })
+     //next按钮
+     $(next).on('click',function(){
+        if(el.position().left===-width){
+            el.animate({left: -1205});
+        }
+        if(el.position().left===0){
+            el.animate({left: -width},300);
+        }
+    })    
 }
 
        

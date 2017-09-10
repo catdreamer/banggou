@@ -24,7 +24,7 @@ body { width: 1263px; height: auto; min-height: 600px; }
 
 #header .container .search .seachRight a { float: left; color: #666; padding: 0 10px; border-right: 1px solid #DCDCDC; }
 
-#header .container .search .seachRight a em { font-style: normal; color: #d51819; }
+#header .container .search .seachRight .red { font-style: normal; color: #d51819; }
 
 #header .container .search .seachRight .last { border-right: 0 none; }
 
@@ -57,21 +57,29 @@ body { width: 1263px; height: auto; min-height: 600px; }
 
 #nav .nav_ul .shop_flei i { padding-right: 14px; vertical-align: sub; font-size: 26px; font-weight: 600; }
 
-#nav .nav_ul .shop_flei .left_nav { position: absolute; background-color: #ccc; left: 0; top: 40px; width: 224px; height: 530px; border: 1px solid #d51819; border-top: 0; padding-left: 10px; z-index: 99; line-height: 18px; display: none; }
+#nav .nav_ul .shop_flei .left_nav { position: absolute; background-color: #fff; left: 0; top: 40px; width: 224px; height: 530px; border: 1px solid #d51819; border-top: 0; padding-left: 10px; z-index: 99; line-height: 18px; display: none; }
 
 #nav .nav_ul .shop_flei .left_nav .left_nav_ul { width: 224px; height: 530px; }
 
-#nav .nav_ul .shop_flei .left_nav .left_nav_ul li { width: 224px; font-size: 18px; padding: 0 !important; }
+#nav .nav_ul .shop_flei .left_nav .left_nav_ul .red { color: red; }
 
-#nav .nav_ul .shop_flei .left_nav .left_nav_ul li dl { width: 224px; position: relative; }
+#nav .nav_ul .shop_flei .left_nav .left_nav_ul li { width: 224px; font-size: 18px; padding: 0 !important; float: left; height: auto; margin-bottom: 3px; }
 
-#nav .nav_ul .shop_flei .left_nav .left_nav_ul li dl dt { position: relative; width: 224px; height: 19px; margin-top: 10px; font-weight: bold; }
+#nav .nav_ul .shop_flei .left_nav .left_nav_ul li dl { width: 224px; margin-top: 10px; font-weight: bold; }
+
+#nav .nav_ul .shop_flei .left_nav .left_nav_ul li dl dt { width: 224px; height: 19px; margin-top: 10px; font-weight: bold; display: block; }
 
 #nav .nav_ul .shop_flei .left_nav .left_nav_ul li dl dt a { display: inline-block; font: bold 14px "Microsoft YaHei" !important; padding-right: 10px; color: #222; }
 
 #nav .nav_ul .shop_flei .left_nav .left_nav_ul li dl dd { width: 221px; }
 
 #nav .nav_ul .shop_flei .left_nav .left_nav_ul li dl dd a { display: inline-block; font: 400 14px "Microsoft YaHei" !important; padding-right: 3px; color: #696969; line-height: 19px; height: 19px !important; }
+
+#nav .nav_ul .shop_flei .left_nav .left_nav_ul .left_nav_ul_div { width: 723px; height: 531px; background-color: #fff; position: absolute; display: none; left: 235px; top: 0; }
+
+#nav .nav_ul .shop_flei .left_nav .left_nav_ul .left_nav_ul_div li { width: 723px; height: 531px; font-size: 18px; padding: 0 !important; color: red; }
+
+#nav .nav_ul .shop_flei .left_nav .left_nav_ul .left_nav_ul_div .left_nav_ul_div_active { z-index: 334; opacity: 1; }
 
 /*banner*/
 #banner { width: 100%; }
@@ -88,23 +96,14 @@ body { width: 1263px; height: auto; min-height: 600px; }
 
 #banner .container .banner_right .br img { width: 236px; height: 166px; }
 
-.hot_band { width: 1200px; height: 132px; margin: 0 auto; position: relative; overflow: hidden; }
+/*to_top  online_con*/
+#box_top { width: 60px; height: 155px; position: fixed; right: 0; bottom: 30px; z-index: 1000; }
 
-.hot_band .duanmaBox { width: 2405px; height: 118px; position: absolute; top: 0; left: 0; padding: 7px 0; }
+#box_top #topandconsult { width: 60px; height: 155px; }
 
-.hot_band .duanmaBox li { width: 236px; height: 118px; margin-right: 5px; float: left; }
+#box_top #topandconsult .to_top { width: 55px; height: 90px; margin-bottom: 10px; background: url("/img/pic.png") 0 -1060px no-repeat; }
 
-.hot_band .duanmaBox li a { width: 100%; height: 100%; }
-
-.hot_band .duanmaBox li a img { width: 100%; height: 100%; }
-
-.hot_band .duanmaBox li:last-child { margin-right: 0; }
-
-.hot_band span { display: block; z-index: 999; width: 40px; height: 40px; position: absolute; right: 3px; top: 46px; cursor: pointer; }
-
-.hot_band .hot_band_btn_prev { background: url(../img/index/prev.png) no-repeat; left: 3px; }
-
-.hot_band .hot_band_btn_next { background: url(../img/index/next.png) no-repeat; }
+#box_top #topandconsult .online_con { width: 55px; height: 55px; background: url("/img/online_service.png") no-repeat; cursor: pointer; }
 
 /*last-bottom*/
 .last_bottom_wrap { width: 100%; }

@@ -17,11 +17,36 @@
         </div>
         <div class="right fr">
             <div class="login_tab">
-                <h3 class="t1 active" ltn="用户名" ltw="登录密码">帐户登录</h3>
-                <h3 class="t2" ltn="手机号" ltw="登录密码">手机登录</h3>
+                <h3 class="t1 active" ltn="手机号" ltw="登录密码">手机登录</h3>
+                <h3 class="t2" ltn="用户名" ltw="登录密码">帐户登录</h3>
                 <h3 class="t3" ltn="卡&nbsp;号" ltw="卡密码">卡登录</h3>
             </div>
             <div class="box">
+                <div class="login_content">
+                 <div class="mes username_mes clear">
+                     <label for="username">手机号：</label><input type="text" id="username2" placeholder='请输入纯数字'/><span class="hint phone_hint"></span>
+                 </div>
+                 <div class="mes clear">
+                     <label for="password">登录密码：</label><input type="text" id="password2" placeholder='长度不能少于6位且不包含非法字符' /><span class="hint password2_hint"></span>
+                 </div>
+                 <div class="mes code_mes">
+                     <label for="code">验证码：</label><input type="text" id="code2" /><span class="randomcode2"></span><a class="changeCode">换一张</a><span class="hint code2_hint"></span>
+                 </div>
+                 <div class="checkboxs">
+                     <input type="checkbox" id="rememberpsw" checked /><label for="rememberpsw">记住用户名</label>
+                     <input type="checkbox" id="self_login" /><label for="self_login">自动登录</label>
+                 </div>
+                 <div class="confir_mes clear">
+                     <input type="submit" value="" id="sub2" /><a href="#">找回密码？</a>
+                 </div> 
+                 <div class="mes_bottom">
+                     <span>还不是邦购网用户？马上加入吧~~~</span><a href="#">免费注册>></a>
+                 </div> 
+                 <div class="login_surport">
+                     <h4>或者使用合作网站登录：</h4>
+                     <p><a href="" class="qq">QQ</a><a href="" class="zfb">支付宝</a><a href="" class="xlwb">新浪微博</a><a href="" class="wx">微信</a><a href="" class="rrw">人人网</a></p>
+                 </div>                  
+                </div> 
                 <div class="login_content">
                         <div class="mes username_mes clear">
                             <label for="username">用户名：</label><input type="text" id="username" /><span class="hint">请输入用户名</span>
@@ -47,31 +72,6 @@
                             <p><a href="" class="qq">QQ</a><a href="" class="zfb">支付宝</a><a href="" class="xlwb">新浪微博</a><a href="" class="wx">微信</a><a href="" class="rrw">人人网</a></p>
                         </div>                  
                 </div>
-                <div class="login_content">
-                     <div class="mes username_mes clear">
-                         <label for="username">手机号：</label><input type="text" id="username2" placeholder='请输入纯数字'/><span class="hint phone_hint"></span>
-                     </div>
-                     <div class="mes clear">
-                         <label for="password">登录密码：</label><input type="text" id="password2" placeholder='长度不能少于6位且不包含非法字符' /><span class="hint password2_hint"></span>
-                     </div>
-                     <div class="mes code_mes">
-                         <label for="code">验证码：</label><input type="text" id="code2" /><span class="randomcode2"></span><a class="changeCode">换一张</a><span class="hint code2_hint"></span>
-                     </div>
-                     <div class="checkboxs">
-                         <input type="checkbox" id="rememberpsw" checked /><label for="rememberpsw">记住用户名</label>
-                         <input type="checkbox" id="self_login" /><label for="self_login">自动登录</label>
-                     </div>
-                     <div class="confir_mes clear">
-                         <input type="submit" value="" id="sub2" /><a href="#">找回密码？</a>
-                     </div> 
-                     <div class="mes_bottom">
-                         <span>还不是邦购网用户？马上加入吧~~~</span><a href="#">免费注册>></a>
-                     </div> 
-                     <div class="login_surport">
-                         <h4>或者使用合作网站登录：</h4>
-                         <p><a href="" class="qq">QQ</a><a href="" class="zfb">支付宝</a><a href="" class="xlwb">新浪微博</a><a href="" class="wx">微信</a><a href="" class="rrw">人人网</a></p>
-                     </div>                  
-                </div> 
                 <div class="login_content">
                      <div class="mes username_mes clear">
                          <label for="username">卡号：</label><input type="text" id="username" /><span class="hint">请输入卡号</span>

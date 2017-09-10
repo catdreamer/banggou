@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-09-04 15:08:27
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-08 22:51:01
+* @Last Modified time: 2017-09-09 17:10:51
 */
 
 // require(['config'],function(){
@@ -78,7 +78,7 @@ function sign(){
                             Cookie.set('user',$('#username2').val(),now,'/');
                             // window.location.reload();
                             alert('登录成功');
-                            window.location.href='http://localhost:1000/';
+                            window.location.href='/index.html';
                         }
                     }
                 });

@@ -1,0 +1,199 @@
+/* 
+* @Author: Marte
+* @Date:   2017-09-09 23:57:54
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-09-10 02:10:06
+*/
+
+#car_headtop .container{
+        height: 55px;padding-top: 5px;
+    }
+    
+
+.flow_headcontent .container{
+        height: 27px;position: relative;border-bottom:1px solid #dcdcdc;box-sizing:border-box;
+       
+    }
+ .flow_headcontent .container span{
+            width: 398px;height: 30px;position: absolute;padding: 0;right: 0;display: block;background: url(/img/pic.png) no-repeat;background-position: 0 -1578px;z-index: 1;margin-top:-1px;
+        }
+
+/*此处开始写*/
+.car_title{
+    width:1200px;height: 42px;margin:0 auto;margin-top: 15px;
+}
+.car_title span{
+    height: 42px;display:block;float: left;line-height: 42px;font-size: 18px;font-weight: 700;color: #000;
+}
+.car_title a{
+    float: right;
+    margin-top: 16px;
+    font-size: 14px;
+    text-decoration: underline;
+    color: #f8584f;
+}
+#cartTop{
+    width: 1200px;height: 40px;margin:0 auto;margin-top: 20px;background: #f8f7f7;
+}
+#cartTop li{
+    float:left;
+    line-height: 40px;
+    text-align: left;
+    /*width: 126px;*/
+    height: 40px;
+}
+#cartTop .mbshop_cart_1127_01{
+    width: 126px;
+}
+#cartTop .mbshop_cart_1127_02{
+    width: 250px;
+}
+#cartTop .mbshop_cart_1127_03{
+    width: 208px;
+}
+#cartTop .mbshop_cart_1127_04{
+    width: 210px;
+}
+#cartTop .mbshop_cart_1127_05{
+    width: 117px;
+}
+#cartTop .mbshop_cart_1127_07{
+    width: 155px;
+}
+#cartTop .mbshop_cart_1127_09{
+    width: 74px;
+}
+/*#cartTop li .mbshop_checkbox{
+    /*position: relative;*/
+    /*cursor: pointer;
+    display: inline-block;
+    padding-left: 18px;
+    width: 36px;
+    height: 40px;
+    margin-left: 10px;*/
+/*}*/
+/*#cartTop li .mbshop_checkbox input{
+    width: 18px;height: 18px;
+}
+#cartTop li .mbshop_checkbox b{
+    margin-left: 12px;
+    font-weight: 400;
+}*/
+.car_shopAll{
+    border: 1px solid #ccc;
+    width: 1200px;
+    height: 162px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin: 0 auto;
+}
+.car_shopAll .banggo_cart_tab{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: #fdf6ee;
+    font-size: 12px;
+    float: none;
+    border-bottom: 1px solid #eaeaea;
+}
+.car_shopAll .banggo_cart_tab label{
+    width: 54px;height: 40px;font-size: 12px;width: 36px;padding-left: 18px;
+}
+.car_shopAll .banggo_cart_tab #ad_cart_text_ad{
+    display: block;
+    float:right;
+    margin-right: 40px;
+    color: #000;
+    font-style: normal;
+}
+/*.car_shopAll  .car_singleshop{
+    
+    height: 120px;
+    border-top: 1px solid #ccc;
+    box-sizing: border-box;
+}*/
+.car_shopAll  .car_single_goods{
+    width: 100%;
+    border-top: 1px solid #ccc;
+    box-sizing: border-box;
+    height: 80px;
+    padding: 20px 0;
+}
+.car_shopAll  .car_single_goods li{
+    
+    float:left;
+    height: 100%;
+    line-height: 22px;
+    text-align: center;
+}
+.car_shopAll  .car_single_goods .single_01{
+    width: 38px;height: 80px;
+}
+.single_01 input{
+    width: 18px;height: 18px;
+}
+.car_shopAll  .car_single_goods .single_02{
+    width: 296px;height: 80px;
+    /*height: 80px;*/
+}
+.single_02 dl{
+    width: 500px;height: 80px;
+}
+.single_02 dl dt{
+    border: 1px solid #eaeaea;float:left;
+}
+.single_02 dl dt a{
+    display:inline-block;width: 78px;height: 78px;
+}
+.single_02 dl dt a img{
+    width: 100%;height: 100%;
+}
+.single_02 dl dd{
+    float:right;width: 196px;height: 87px;padding-left: 10px;
+}
+.single_02 dl dd a{
+    width: 196px;height: 44px;
+}
+
+.single_02 dl dd a p{
+    width: 148px;
+    text-align: left;
+    overflow: hidden;
+    line-height: 20px;
+}
+.single_02 dl dd i{
+    width: 100%;
+    display: block;
+    text-align: left;
+    font-style: normal;
+    color: #999;
+}
+.single_02 dl dd span{
+    color: #c7c7c7; width: 410px;
+    height: auto;
+    overflow: hidden;
+    line-height: 16px;
+}
+.car_shopAll  .car_single_goods .single_03{
+    width: 190px;
+    height: 80px;
+}
+.car_shopAll  .car_single_goods .single_04{
+    width: 160px;padding-right: 20px;
+    height: 80px;
+}
+.car_shopAll  .car_single_goods .single_05{
+    width:86px;
+    padding: 0 47px;margin-left: 10px;
+    height: 80px;
+}
+.car_shopAll  .car_single_goods .single_07{
+    width:180px;
+    /*padding: 0 47px;margin-left: 10px;*/
+    height: 80px;
+}
+.car_shopAll  .car_single_goods .single_09{
+    width:76px;
+   padding-right: 22px;
+    height: 80px;
+}

@@ -3,6 +3,8 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, em, img, st
 
 body { font-family: "微软雅黑","宋体",verdana,"Helvetica Neue",Helvetica,sans-serif; font-size: 12px; line-height: 18px; }
 
+em, i { font-style: normal; }
+
 ol, ul { list-style: none; }
 
 img { display: block; border: 0 none; opacity: 1; }

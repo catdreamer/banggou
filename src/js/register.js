@@ -2,7 +2,7 @@
 * @Author: lmm
 * @Date:   2017-09-04 14:03:13
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-05 21:06:26
+* @Last Modified time: 2017-09-09 17:18:50
 */
 
 
@@ -98,9 +98,9 @@ function register(){
                        },
                        success: function(res){console.log(res)
                            if(res ==='ok'){
-                                window.location.reload();
-                               alert('已经注册成功，亲可以去买买买啦');
-                               window.location.href='http://localhost:1000/html/login';
+                               window.location.reload();
+                               alert('已经注册成功，请登录');
+                               window.location.href='/html/login';
                            }else{
                                alert('注册失败，请填写正确的注册信息');
                            }
