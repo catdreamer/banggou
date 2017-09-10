@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-09-06 09:07:15
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-10 22:14:12
+* @Last Modified time: 2017-09-11 04:34:55
 */
 
 
@@ -163,19 +163,20 @@ require(['config'],function(){
                     Buffer.init();
                 }
                 require(['common'],function(){
-                    var userName = Cookie.get('user');
-                    if(userName!==''){
-                        $('.heaerRa').html(userName+',您好');                
-                        $('.tuichu').css('display','block'); 
-                    }             
-                    $('.tuichu').on('click',function(){
-                        // 清除cookie
-                        var now = new Date();
-                        now.setDate(now.getDate()-100);
-                        Cookie.set('user',null,now);
-                        $('.tuichu').css('display','none');
-                        $('.heaerRa').html('登录');
-                    });
+                    readC();
+                    // var userName = Cookie.get('user');
+                    // if(userName!==''){
+                    //     $('.heaerRa').html(userName+',您好');                
+                    //     $('.tuichu').css('display','block'); 
+                    // }             
+                    // $('.tuichu').on('click',function(){
+                    //     // 清除cookie
+                    //     var now = new Date();
+                    //     now.setDate(now.getDate()-100);
+                    //     Cookie.set('user',null,now);
+                    //     $('.tuichu').css('display','none');
+                    //     $('.heaerRa').html('登录');
+                    // });
                     //返回顶部
                     toTop();
                     //导航

@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-09-06 21:00:38
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-10 22:40:09
+* @Last Modified time: 2017-09-11 04:33:00
 */
 require(['config'],function(){
     require(['jquery'],function($){ 
@@ -13,6 +13,9 @@ require(['config'],function(){
           $('.last_bottom_wrap').load('/html/public.html .last_bottom_c');
           $('#footer').load('/html/public.html .footer_c');
           $('#box_top').load('/html/public.html #topandconsult');
+          require(['common'],function(){
+              readC();
+            });
           // 解析数据
           var name= location.search.substring(1).split('&');
                   console.log(name)
@@ -34,7 +37,7 @@ require(['config'],function(){
                 
                   //页面初始化效果
                   getData(1,40,gender,category,band);
-                  function getData(pageNo,qty,gender,category,band){
+                  function getData(pageNo,qty,gender,category,band,price,discount){
                     $.ajax({
                         url: '/mysql/list.php',
                         data: {
@@ -43,6 +46,8 @@ require(['config'],function(){
                             category: category,
                             gender: gender,
                             band: band,
+                            price: price,
+                            discount:discount,
                             contentType: "application/x-www-form-urlencoded; charset=UTF-8"
                         },
                         success: function(res){
@@ -50,12 +55,17 @@ require(['config'],function(){
                           console.log($res)
                             fn($res); 
                             var pageNo = $res.pageNo;
+                            $('.cp').text(pageNo);
+                            $('.cg').text($res.total);
                             var totalPage = Math.ceil($res.total/40)-1;console.log(totalPage);
+                            $('.tp').text(totalPage+1);
+                             // $('page').find('currentPage').siblings('a').hide();
                             for(var i = 0;i<totalPage;i++){
                               var a = $('<a></a>').text(i+2).attr('href','#');
                               $('.currentPage').after(a);
-
+                              // $('.currentPage').appendTo('.page_a');
                             }
+
 
                             $('.page').on('click','a',function(){
                               var pageNo = $(this).index()+1;
@@ -68,10 +78,26 @@ require(['config'],function(){
                                         category: category,
                                         gender: gender,
                                         band: band,
+                                        price: price,
                                         contentType: "application/x-www-form-urlencoded; charset=UTF-8"
                                     },
                                     success: function(res){
                                       var $res = JSON.parse(res);
+
+                                      var pageNo = $res.pageNo;
+                                      $('.cp').text(pageNo);console.log(pageNo);
+                                      $('.cg').text($res.total);console.log($res.total);
+                                      // var totalPage = Math.ceil($res.total/40)-1;console.log(totalPage);
+                                      
+
+                                      console.log();
+                                      // $('.tp').text(totalPage+1);
+                                      // $('.page').prop('.currentPage').siblings('a').hide();
+                                      // for(var i = 0;i<=totalPage-1;i++){
+                                      //   var a = $('<a></a>').text(i-1).attr('href','#');
+                                      //   $('.currentPage').after(a);
+
+                                      // }
                                        fn($res); 
                                      }
                                     });
@@ -84,6 +110,8 @@ require(['config'],function(){
                     $('.xingbie_items').on('click','a',function(){
                       var gender = $(this).text();
                       console.log(gender)
+                      $('.page').find('.currentPage').siblings('a').hide();
+                      $('.page').eq(0).show();
                       getData(1,40,gender);
                     });
                      //按照分类筛选
@@ -100,9 +128,22 @@ require(['config'],function(){
                           getData(pageNo,40,'','',band); 
                         });
                     //     //按照价格筛选
-                    //     //按照尺寸筛选
-                    //     //高级筛选
-                    //     //按照尺寸筛选
+                    // console.log($('#price'))
+                      $('#price').on('click',function(){
+
+                          // var price=$(this).text();
+                          // var pageNo = $(this).index();
+                          // console.log(band)
+                          getData(1,40,'','',band,'price'); 
+                        });  
+                    //     //按照折扣筛选
+                    $('#discount').on('click',function(){
+
+                        // var price=$(this).text();
+                        // var pageNo = $(this).index();
+                        // console.log(band)
+                        getData(1,40,'','',band,'','discount'); 
+                      });
          
           // req();
           Taba();

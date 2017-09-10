@@ -2,7 +2,7 @@
 * @Author: lmm
 * @Date:   2017-09-04 14:44:05
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-09 17:01:40
+* @Last Modified time: 2017-09-11 05:04:29
 */
 
 // tab切换
@@ -139,4 +139,20 @@ function vCode(){
     })    
 }
 
-       
+function readC(){
+    var userName = Cookie.get('user');
+    var bagnum = Cookie.get('bags');
+    $('.bagContent a em').text(bagnum);
+    if(userName!==''){
+        $('.heaerRa').html(userName+',您好');                
+        $('.tuichu').css('display','block'); 
+    }             
+    $('.tuichu').on('click',function(){
+        // 清除cookie
+        var now = new Date();
+        now.setDate(now.getDate()-100);
+        Cookie.set('user',null,now);
+        $('.tuichu').css('display','none');
+        $('.heaerRa').html('登录');
+    });
+}      

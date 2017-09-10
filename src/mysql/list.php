@@ -7,6 +7,8 @@
 	$category = isset($_GET['category']) ? $_GET['category'] : '';
     $gender = isset($_GET['gender']) ? $_GET['gender'] : '';
     $band = isset($_GET['band']) ? $_GET['band'] : '';
+    $price = isset($_GET['price']) ? $_GET['price'] : '';
+    $discount = isset($_GET['discount']) ? $_GET['discount'] : '';
 	// 编写sql语句
 	$sql = "select * from goods";
     $count ="select count(*) from goods";
@@ -25,6 +27,16 @@
     if($band){
         $sql .= " where band='$band'";
         $count ="select count(*) from goods where band='$band'";
+    }
+    if($price){
+        // select *  from Score order by cno asc,degree desc
+        $sql .= " order by price asc";
+        $count ="select * from goods order by price asc";
+    }
+    if($discount){
+        // select *  from Score order by cno asc,degree desc
+        $sql .= " order by discount desc";
+        $count ="select * from goods order by discount desc";
     }
     // if($price){
     //     $sql .= " where band='$band'";

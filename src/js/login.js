@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-09-04 15:08:27
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-09 17:10:51
+* @Last Modified time: 2017-09-11 04:13:11
 */
 
 // require(['config'],function(){
@@ -10,6 +10,7 @@
 //         require(['common'],function(com){}
 //     }
 // }
+
 function sign(){
     //验证码生成
     var showCode = $('.randomcode2');
@@ -74,8 +75,14 @@ function sign(){
                            alert('未注册或者信息填写错误');
                         }else if(msg==='ok'){
                             var now = new Date();
-                            now.setDate(now.getDate()+7);
-                            Cookie.set('user',$('#username2').val(),now,'/');
+                           if($('#self_login').is(':checked')) {
+                                now.setDate(now.getDate()+7);
+                                // Cookie.set('user',$('#username2').val(),now,'/');
+                           }else{
+                                now.setDate(now.getDate()+1);
+                                
+                           }
+                           Cookie.set('user',$('#username2').val(),now,'/');
                             // window.location.reload();
                             alert('登录成功');
                             window.location.href='/index.html';

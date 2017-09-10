@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-09-07 17:09:55
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-10 19:25:03
+* @Last Modified time: 2017-09-11 04:33:32
 */
 require(['config'],function(){
     require(['jquery'],function($){ 
@@ -19,7 +19,7 @@ require(['config'],function(){
                 require(['common'],function(){
                   //返回顶部
                   toTop();
-                    
+                  readC();  
                 });
                 //按钮事件
                 $('.addbuyBag').on('click',function(){
@@ -62,6 +62,7 @@ require(['config'],function(){
                    // arr_goods中不存在当前商品
                    if(i===arr_goods.length){
                     // 获取点击按钮对应商品信息
+                    
                     var goods = {
                         // 商品id
                         guid:$('.bianhao').text(),
