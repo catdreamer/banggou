@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-09-07 17:09:55
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-11 04:33:32
+* @Last Modified time: 2017-09-11 11:51:53
 */
 require(['config'],function(){
     require(['jquery'],function($){ 
@@ -32,7 +32,7 @@ require(['config'],function(){
                     $('.account').css('display','none');
                 });
                 //结算
-                $('.ac').on('click',function(){ console.log(7777)
+                $('.addbuyBag').on('click',function(){ console.log(7777)
                     // 添加到购物车
                    var arr_goods = [];
                    // 先查看当前购物车有无cookie
